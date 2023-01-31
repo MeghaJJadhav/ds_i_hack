@@ -21,11 +21,11 @@ public class ocr {
                     System.out.println("Text in file " + file.getName() + ": " + text);
                     // split the text by spaces
                     String[] words = text.split("\\s+");
-                    //loop through the words
+                    
                     for(String word: words) {
-                        //check if the word is in the list of words
+                      
                         if(word.equalsIgnoreCase("aadhar card") || word.equalsIgnoreCase("passport") || word.equalsIgnoreCase("light bill")){
-                            // create a folder with the name of the word if it doesn't exist
+                      
                             File destination = new File(folder.getAbsolutePath()+"/"+word);
                             if(!destination.exists()) {
                                 destination.mkdir();
